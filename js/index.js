@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM \n Is \n Awesome",
+    "h1": "DOM <br> Is <br> Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street<br>Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -67,7 +67,7 @@ extras.style.color = "green"
 //section CTA
 
 let ctaText = document.querySelector(".cta-text > h1")
-ctaText.textContent=siteContent["cta"]["h1"]
+ctaText.innerHTML=siteContent["cta"]["h1"]
 
 let button = document.querySelector(".cta-text > button")
 button.textContent=siteContent["cta"]["button"]
@@ -105,7 +105,7 @@ let contact = document.querySelectorAll(".contact h4")
 contact[0].textContent=siteContent["contact"]["contact-h4"]
 
 let contactDetails = document.querySelectorAll(".contact p")
-contactDetails[0].textContent=siteContent["contact"]["address"]
+contactDetails[0].innerHTML=siteContent["contact"]["address"]
 contactDetails[1].textContent=siteContent["contact"]["phone"]
 contactDetails[2].textContent=siteContent["contact"]["email"]
 
