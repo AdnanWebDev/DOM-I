@@ -53,12 +53,13 @@ navItems[5].textContent=siteContent["nav"]["nav-item-6"]
 //Setting the color for links to GREEN
 navItems.forEach(color => color.style.color = 'green')
 
+//Adding two items via prepend and appendChild
 let navSelect = document.querySelector('nav')
 let stuff = document.createElement('a')
 let extras = document.createElement('a')
-stuff.textContent="Stuff"
+stuff.textContent="Home"
 extras.textContent="Extras"
-navSelect.appendChild(stuff)
+navSelect.prepend(stuff)
 stuff.style.color = "green"
 navSelect.appendChild(extras)
 extras.style.color = "green"
